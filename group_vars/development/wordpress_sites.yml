@@ -1,0 +1,21 @@
+# Documentation: https://roots.io/trellis/docs/local-development-setup/
+# `wordpress_sites` options: https://roots.io/trellis/docs/wordpress-sites
+# Define accompanying passwords/secrets in group_vars/development/vault.yml
+
+wordpress_sites:
+  manuphatak.com:
+    site_hosts:
+      - manuphatak.dev
+    www_redirect: true
+    local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
+    admin_user: admin
+    admin_email: admin@manuphatak.dev
+    multisite:
+      enabled: false
+    ssl:
+      enabled: false
+      provider: self-signed
+    cache:
+      enabled: false
+    env:
+      disable_wp_cron: true
