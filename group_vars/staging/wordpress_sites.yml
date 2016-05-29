@@ -6,10 +6,8 @@ wordpress_sites:
   manuphatak.com:
     site_hosts:
       - staging.manuphatak.com
-    local_path: ../manuphatak.com # path targeting local Bedrock site directory (relative to Ansible root)
-    repo: https://github.com/bionikspoon/manuphatak.com # replace with your Git repo URL
-    repo_subtree_path: . # relative path to your Bedrock/WP directory in your repo
-    branch: master
+    www_redirect: true
+    local_path: /Code/manuphatak.com
     multisite:
       enabled: false
     ssl:
@@ -17,3 +15,6 @@ wordpress_sites:
       provider: letsencrypt
     cache:
       enabled: false
+    repo: https://github.com/bionikspoon/manuphatak.com # replace with your Git repo URL
+    repo_subtree_path: . # relative path to your Bedrock/WP directory in your repo
+    branch: master
