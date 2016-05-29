@@ -7,7 +7,7 @@ wordpress_sites:
     site_hosts:
       - manuphatak.dev
     www_redirect: true
-    local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
+    local_path: ../manuphatak.com # path targeting local Bedrock site directory (relative to Ansible root)
     admin_user: admin
     admin_email: admin@manuphatak.dev
     multisite:
